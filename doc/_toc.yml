@@ -11,5 +11,5 @@ parts:
   numbered: true
   chapters:
   - file: content/src/production/POMS.md
-  - file: content/src/production/prodution_team.md
+  - file: content/src/production/production_team.md
   
