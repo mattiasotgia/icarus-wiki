@@ -12,4 +12,8 @@ parts:
   chapters:
   - file: content/src/production/POMS.md
   - file: content/src/production/production_team.md
-  
+- caption: Operations
+  numbered: true
+  chapters:
+  - file: content/src/operations/DAQ.md
+  - file: content/src/operations/RunCo.md

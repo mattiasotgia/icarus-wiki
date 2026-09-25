@@ -3,10 +3,10 @@ name: deploy-book
 on:
   # Trigger the workflow on push to main branch
   push:
-    branches:
-      - 'doc-develop'
-    # tags:
-    #   - '*'
+    # branches:
+    #   - 'doc-develop'
+    tags:
+      - '*'
 
 env:
   BASE_URL: /${{ github.event.repository.name }}
