@@ -7,16 +7,9 @@ parts:
   numbered: true
   chapters:
   - file: content/src/laropt.md
-# # - caption: Approfondimenti
-# #   chapters:
-# #   - file: content/in_depth/aridaje
-# - caption: Riferimenti bibliografici
-#   chapters:
-#   - file: content/zbiblio
-# - caption: Contatti esterni
-#   chapters:
-#   - url: https://mattiasotgia.github.io/
-#     title: Mattia Sotgia
-#   - url: https://twitter.com/mattiasotgia1
-#     title: '@mattiasotgia1 (twitter)'
+- caption: Production
+  numbered: true
+  chapters:
+  - file: content/src/production/POMS.md
+  - file: content/src/production/prodution_team.md
   
