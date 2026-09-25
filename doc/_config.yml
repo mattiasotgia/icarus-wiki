@@ -1,51 +1,48 @@
-
 # General settings
 title: ICARUS personal wiki
 author: Mattia Sotgia
 copyright: "2026"
+
 logo: "assets/imgs/logo/logo.gif"
 email: msotgia@fnal.gov
 
-exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", LICENSE.md]
+exclude_patterns:
+  - _build
+  - Thumbs.db
+  - .DS_Store
+  - "**.ipynb_checkpoints"
+  - LICENSE.md
 
-# Force re-execution of notebooks on each build.
 execute:
   execute_notebooks: auto
 
-# Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - assets/refs/references.bib
 
-# Information about where the book exists on the web
 repository:
   url: https://github.com/mattiasotgia/icarus-wiki
-  path_to_book: doc  # Optional path to your book, relative to the repository root
-  # branch: main  # Which branch of the repository should be used when creating links (optional)
+  path_to_book: doc
+  branch: doc-develop
 
 html:
   favicon: assets/imgs/logo/favicon.ico
-  baseurl: https://mattiasotgia.github.io/icarus-wiki
+  baseurl: /icarus-wiki
   home_page_in_navbar: false
   use_repository_button: false
   use_issues_button: false
-  # extra_footer: |
-  #   <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://mattiasotgia.github.io/machine-learning-physics">Metodi di Machine Learning per la Fisica</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://mattiasotgia.github.io">Mattia Sotgia</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>
 
 sphinx:
   config:
     html_show_copyright: false
+
   html_context:
     default_mode: light
 
 parse:
-  myst_enable_extensions:  
+  myst_enable_extensions:
     - amsmath
     - colon_fence
     - deflist
     - dollarmath
-    # - html_admonition
-    # - html_image
     - linkify
-    # - replacements
     - smartquotes
-    #- substitution
