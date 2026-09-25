@@ -42,7 +42,7 @@ jobs:
       # Build the Docs
       - name: Build the docs
         run: |
-          jupyter-book build doc
+          jupyter book build doc
   
     # Deploy the doc's HTML to gh-pages branch
                     
