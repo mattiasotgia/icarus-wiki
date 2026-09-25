@@ -1,0 +1,22 @@
+
+format: jb-book
+root: content/index
+title: ICARUS Wiki
+# parts:
+# - caption: Lezioni
+#   numbered: true
+#   chapters:
+#   - file: content/lectures/introduction.md
+# # - caption: Approfondimenti
+# #   chapters:
+# #   - file: content/in_depth/aridaje
+# - caption: Riferimenti bibliografici
+#   chapters:
+#   - file: content/zbiblio
+# - caption: Contatti esterni
+#   chapters:
+#   - url: https://mattiasotgia.github.io/
+#     title: Mattia Sotgia
+#   - url: https://twitter.com/mattiasotgia1
+#     title: '@mattiasotgia1 (twitter)'
+  
