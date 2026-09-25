@@ -1,6 +1,6 @@
 
 format: jb-book
-root: contents/index.md
+root: content/index
 title: ICARUS Wiki
 # parts:
 # - caption: Lezioni
