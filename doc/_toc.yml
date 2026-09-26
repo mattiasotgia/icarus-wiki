@@ -6,7 +6,7 @@ parts:
 - caption: Reconstruction
   numbered: true
   chapters:
-  - file: content/src/laropt.md
+  - file: content/src/reconstruction/laropt.md
 - caption: Production
   numbered: true
   chapters:
