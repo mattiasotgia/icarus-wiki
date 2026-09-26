@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="3. Guide for official ICARUS production" href="production_team.html" />
-    <link rel="prev" title="1. laropt" href="../laropt.html" />
+    <link rel="prev" title="1. laropt" href="../reconstruction/laropt.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,7 +175,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reconstruction</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../laropt.html">1. <code class="docutils literal notranslate"><span class="pre">laropt</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconstruction/laropt.html">1. <code class="docutils literal notranslate"><span class="pre">laropt</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Production</span></p>
 <ul class="current nav bd-sidenav">
@@ -311,7 +311,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -327,6 +329,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-it-up">2.1. Setting it up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-jobs">2.2. Submitting jobs</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -339,7 +350,39 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="poms-managed-productions-analysis">
 <h1><span class="section-number">2. </span>POMS managed productions (analysis)<a class="headerlink" href="#poms-managed-productions-analysis" title="Link to this heading">#</a></h1>
 <p>POMS stands for Production Operations Management System, and it is used to provide a highly configurable and user-friendly interface for production submission.</p>
-<p>Anyone in ICARUS can submit jobs using the POMS interface. The basic is well described in the dedicated <code class="docutils literal notranslate"><span class="pre">redmine</span></code> page, which you can find <a class="reference internal" href="#"><span class="xref myst">here</span></a></p>
+<p>Anyone in ICARUS can submit jobs using the POMS interface. The basic is well described in the dedicated <code class="docutils literal notranslate"><span class="pre">redmine</span></code> page, which you can find <a class="reference external" href="https://cdcvs.fnal.gov/redmine/projects/project-py">here</a>.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Project-py</span></code> was updated recently to be run from AL9 nodes, instead of the usual SL7 container. This is the updated guide</p>
+</div></blockquote>
+<section id="setting-it-up">
+<h2><span class="section-number">2.1. </span>Setting it up<a class="headerlink" href="#setting-it-up" title="Link to this heading">#</a></h2>
+<p>Setting up <code class="docutils literal notranslate"><span class="pre">Project.py</span></code> executable script can be done by running the script</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/exp/sbnd/app/users/vito/products/setup_project_py_el9.sh
+</pre></div>
+</div>
+<p>Once done, it is now possible to use it to submit jobs.</p>
+</section>
+<section id="submitting-jobs">
+<h2><span class="section-number">2.2. </span>Submitting jobs<a class="headerlink" href="#submitting-jobs" title="Link to this heading">#</a></h2>
+<p>Submitting jobs is done with the <code class="docutils literal notranslate"><span class="pre">Project.py</span></code> commands. Before running those it is required to have a valid token and upload it over the worker nodes.</p>
+<p>To generate token, first it is needed to declare the <code class="docutils literal notranslate"><span class="pre">ENV</span></code> variable for the filename, and then create the token through the <code class="docutils literal notranslate"><span class="pre">htgettoken</span></code> command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">BEARER_TOKEN_FILE</span><span class="o">=</span>/tmp/bt_u<span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>
+htgettoken<span class="w"> </span>-v<span class="w"> </span>-a<span class="w"> </span>htvaultprod.fnal.gov<span class="w"> </span>-i<span class="w"> </span>icarus
+</pre></div>
+</div>
+<p>Tokens can be uploaded using <code class="docutils literal notranslate"><span class="pre">Project.py</span></code> interface</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Project.py<span class="w"> </span>--experiment<span class="w"> </span>icarus<span class="w"> </span>--upload_credentials
+</pre></div>
+</div>
+<p>At this point job configurations can be uploaded using the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Project.py<span class="w"> </span>--experiment<span class="w"> </span>icarus<span class="w"> </span>--create_campaign<span class="w"> </span>--replace_campaign<span class="w"> </span>--cfg_file<span class="w"> </span>&lt;name<span class="w"> </span>of<span class="w"> </span>cfg<span class="w"> </span>file&gt;.cfg<span class="w"> </span>--ini_file<span class="w"> </span>&lt;name<span class="w"> </span>of<span class="w"> </span>ini<span class="w"> </span>file&gt;.ini
+</pre></div>
+</div>
+<p>This will upload the configuration <code class="docutils literal notranslate"><span class="pre">.cfg</span></code> and submission <code class="docutils literal notranslate"><span class="pre">.ini</span></code> files. Once uploaded the individual stages (listed using the <code class="docutils literal notranslate"><span class="pre">Project.py</span> <span class="pre">--experiment</span> <span class="pre">icarus</span> <span class="pre">--show_campaigns</span></code> command) can be submitted with the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Project.py<span class="w"> </span>--experiment<span class="w"> </span>icarus<span class="w"> </span>--submit<span class="w"> </span>--stage_id<span class="w"> </span>&lt;stage<span class="w"> </span>id&gt;
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -373,7 +416,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../laropt.html"
+       href="../reconstruction/laropt.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -396,6 +439,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-it-up">2.1. Setting it up</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-jobs">2.2. Submitting jobs</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

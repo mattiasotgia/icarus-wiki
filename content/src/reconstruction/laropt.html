@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. DAQ Operations &#8212; ICARUS personal wiki</title>
+    <title>1. laropt &#8212; ICARUS personal wiki</title>
   
   
   
@@ -57,13 +57,13 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/src/operations/DAQ';</script>
-    <link rel="canonical" href="/icarus-wiki/content/src/operations/DAQ.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/src/reconstruction/laropt';</script>
+    <link rel="canonical" href="/icarus-wiki/content/src/reconstruction/laropt.html" />
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5. ICARUS RunCoordination stuff" href="RunCo.html" />
-    <link rel="prev" title="3. Guide for official ICARUS production" href="../production/production_team.html" />
+    <link rel="next" title="2. POMS managed productions (analysis)" href="../production/POMS.html" />
+    <link rel="prev" title="icarus-wiki" href="../../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,8 +174,8 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reconstruction</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../reconstruction/laropt.html">1. <code class="docutils literal notranslate"><span class="pre">laropt</span></code></a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. <code class="docutils literal notranslate"><span class="pre">laropt</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Production</span></p>
 <ul class="nav bd-sidenav">
@@ -183,9 +183,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../production/production_team.html">3. Guide for official ICARUS production</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Operations</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. DAQ Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RunCo.html">5. ICARUS RunCoordination stuff</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../operations/DAQ.html">4. DAQ Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations/RunCo.html">5. ICARUS RunCoordination stuff</a></li>
 </ul>
 
     </div>
@@ -240,7 +240,7 @@
       
       
       
-      <li><a href="../../../_sources/content/src/operations/DAQ.md" target="_blank"
+      <li><a href="../../../_sources/content/src/reconstruction/laropt.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,9 +311,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -324,23 +322,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>DAQ Operations</h1>
+    <h1>laropt</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developing-daq-code-newspackdevarea-sh">4.1. Developing DAQ code: <code class="docutils literal notranslate"><span class="pre">newSPACKDevArea.sh</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">4.1.1. Usage</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-building-a-daq-dev-area">4.2. Re-building a DAQ dev. area</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -350,31 +336,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="daq-operations">
-<h1><span class="section-number">4. </span>DAQ Operations<a class="headerlink" href="#daq-operations" title="Link to this heading">#</a></h1>
-<p>ICARUS DAQ operation wiki for experts is hosted over RedMine’s <a class="reference external" href="https://cdcvs.fnal.gov/redmine/projects/icarus-operations/wiki/DAQ_Experts">DAQ Experts page</a>. Up-to date guides for almost everything are there.</p>
-<section id="developing-daq-code-newspackdevarea-sh">
-<h2><span class="section-number">4.1. </span>Developing DAQ code: <code class="docutils literal notranslate"><span class="pre">newSPACKDevArea.sh</span></code><a class="headerlink" href="#developing-daq-code-newspackdevarea-sh" title="Link to this heading">#</a></h2>
-<p>Gennady wrote a handy (but clunky) tool to be able to develop the ICARUS DAQ. It is quite useful for setting it up the first time around. Compiling an already set-up DAQ development area can be done following the details <a class="reference internal" href="#re-building-a-daq-dev-area"><span class="xref myst">later described</span></a>.</p>
-<blockquote>
-<div><p>Note: Any DAQ development area should be installed in the <code class="docutils literal notranslate"><span class="pre">${HOME}/DAQ_SPACK_DevArea/</span></code> directory</p>
-</div></blockquote>
-<p>Setting it up requires little effort. The very first thing to do is to source the correct packages</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SPACK_HOME_DIR</span><span class="o">=</span>/daq/software/spack_packages/spack/v1.0.1.sbnd<span class="p">;</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">SPACK_HOME_DIR</span><span class="si">}</span>/sbndaq-spack-tools:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
-</pre></div>
-</div>
-<p>This way it is possible to ensure that the script is correctly located,</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>which<span class="w"> </span>newSPACKDevArea.sh
-/daq/software/spack_packages/spack/v1.0.1.sbnd/sbndaq-spack-tools/newSPACKDevArea.sh
-</pre></div>
-</div>
-<section id="usage">
-<h3><span class="section-number">4.1.1. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
-</section>
-</section>
-<section id="re-building-a-daq-dev-area">
-<h2><span class="section-number">4.2. </span>Re-building a DAQ dev. area<a class="headerlink" href="#re-building-a-daq-dev-area" title="Link to this heading">#</a></h2>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="laropt">
+<h1><span class="section-number">1. </span><code class="docutils literal notranslate"><span class="pre">laropt</span></code><a class="headerlink" href="#laropt" title="Link to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -390,7 +353,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content/src/operations"
+            path: "./content/src/reconstruction"
         },
         predefinedOutput: true
     }
@@ -408,20 +371,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../production/production_team.html"
+       href="../../index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Guide for official ICARUS production</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">icarus-wiki</span></code></p>
       </div>
     </a>
     <a class="right-next"
-       href="RunCo.html"
+       href="../production/POMS.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>ICARUS RunCoordination stuff</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>POMS managed productions (analysis)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -431,25 +394,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developing-daq-code-newspackdevarea-sh">4.1. Developing DAQ code: <code class="docutils literal notranslate"><span class="pre">newSPACKDevArea.sh</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">4.1.1. Usage</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-building-a-daq-dev-area">4.2. Re-building a DAQ dev. area</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

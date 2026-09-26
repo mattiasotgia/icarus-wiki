@@ -176,7 +176,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reconstruction</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../laropt.html">1. <code class="docutils literal notranslate"><span class="pre">laropt</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reconstruction/laropt.html">1. <code class="docutils literal notranslate"><span class="pre">laropt</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Production</span></p>
 <ul class="nav bd-sidenav">
@@ -337,25 +337,25 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#icarus-pot-accounting-scripts">5.1. ICARUS POT accounting scripts</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-it-up">5.1.1. Setting it up</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">5.1.1.1. 1. Installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-conda-environment">5.1.1.2. 2. Creating the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-needed-software">5.1.1.3. 3. Installing the needed software</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-pot-code-and-setting-it-up">5.1.1.4. 4. Installing the POT code and setting it up</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-oracle-instantclient">5.1.1.4.1. 4.1 Installing Oracle instantclient</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#git-repository-and-pot-scripts">5.1.1.4.2. 4.2 Git repository and POT scripts</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-this-repository">5.1.1.4.3. 4.3 Cloning THIS repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">5.1.1.1. Installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-conda-environment">5.1.1.2. Creating the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-needed-software">5.1.1.3. Installing the needed software</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-pot-code-and-setting-it-up">5.1.1.4. Installing the POT code and setting it up</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-oracle-instantclient">5.1.1.4.1. Installing Oracle instantclient</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#git-repository-and-pot-scripts">5.1.1.4.2. Git repository and POT scripts</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-this-repository">5.1.1.4.3. Cloning THIS repository</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code-the-first-time">5.1.2. Running the code <em>the first time</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-pot-accounting-script-s">5.1.3. Running the POT accounting script(s)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-parsing-the-daqinterface-log-file">5.1.3.1. 1. Getting and parsing the <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-parsing-the-daqinterface-log-file">5.1.3.1. Getting and parsing the <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-delivered-collected-pot">5.1.3.2. Update delivered/collected POT</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#draw-plots">5.1.3.3. Draw plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-weekly-report-to-fermilab-directorate-performance-database">5.1.3.4. Commit weekly report to Fermilab directorate performance database</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-delivered-collected-pot">5.1.4. 2. Update delivered/collected POT</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#draw-plots">5.1.5. 3. Draw plots</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-weekly-report-to-fermilab-directorate-performance-database">5.1.6. Commit weekly report to Fermilab directorate performance database</a></li>
 </ul>
 </li>
 </ul>
@@ -380,7 +380,7 @@ document.write(`
 <div><p><strong>IMPORTANT</strong> Do not clone this repository AS-IS. Please follow these instruction, making sure that at the end it all will work properly.</p>
 </div></blockquote>
 <section id="installing-conda">
-<h4><span class="section-number">5.1.1.1. </span>1. Installing <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#installing-conda" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.1.1.1. </span>Installing <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#installing-conda" title="Link to this heading">#</a></h4>
 <p>The first step is to have<code class="docutils literal notranslate"><span class="pre">conda</span></code> running on the <code class="docutils literal notranslate"><span class="pre">icarusgpvm</span></code> servers. This is needed to have a python environment working outside of the SL&amp; container. <code class="docutils literal notranslate"><span class="pre">conda</span></code> OG is not allowed by FNAL since is not open-source, and so we need to use its open-source twin <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>. You can download it from the official site or using the command (from within the <code class="docutils literal notranslate"><span class="pre">icarusgpvm</span></code>) below</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span><span class="s2">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">.sh"</span>
 </pre></div>
@@ -390,16 +390,16 @@ document.write(`
 </pre></div>
 </div>
 <blockquote>
-<div><p><strong>Important</strong> You should pass the path without env. variables, so for example if your <code class="docutils literal notranslate"><span class="pre">$USER</span></code> was <code class="docutils literal notranslate"><span class="pre">johndoe</span></code> you would pass <code class="docutils literal notranslate"><span class="pre">/exp/icarus/app/user/johndoe/miniconda3/</span></code>.</p>
+<div><p><strong>Important</strong> You should pass the path without env. variables, so for example if your <code class="docutils literal notranslate"><span class="pre">$USER</span></code> was <code class="docutils literal notranslate"><span class="pre">johndoe</span></code> you would pass <code class="docutils literal notranslate"><span class="pre">/exp/icarus/app/users/johndoe/miniconda3/</span></code>.</p>
 </div></blockquote>
 <p>At this point in order to have the <code class="docutils literal notranslate"><span class="pre">conda</span></code> script available, you sould run the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/exp/icarus/app/user/<span class="nv">$USER</span>/miniconda3/etc/profile.d/conda.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/exp/icarus/app/users/<span class="nv">$USER</span>/miniconda3/etc/profile.d/conda.sh
 </pre></div>
 </div>
 <p>Now you are able to create the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment.</p>
 </section>
 <section id="creating-the-conda-environment">
-<h4><span class="section-number">5.1.1.2. </span>2. Creating the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment<a class="headerlink" href="#creating-the-conda-environment" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.1.1.2. </span>Creating the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment<a class="headerlink" href="#creating-the-conda-environment" title="Link to this heading">#</a></h4>
 <p>You can create the conda environment now with the command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>runCo<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12
 </pre></div>
@@ -410,7 +410,7 @@ document.write(`
 </div>
 </section>
 <section id="installing-the-needed-software">
-<h4><span class="section-number">5.1.1.3. </span>3. Installing the needed software<a class="headerlink" href="#installing-the-needed-software" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.1.1.3. </span>Installing the needed software<a class="headerlink" href="#installing-the-needed-software" title="Link to this heading">#</a></h4>
 <p>You can install the required python packages with the command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>beautifulsoup4<span class="w"> </span>Bottleneck<span class="w"> </span>brotli<span class="w"> </span>click<span class="w"> </span>lxml<span class="w"> </span>mplhep<span class="w"> </span>numexpr<span class="w"> </span>pandas<span class="w"> </span>pyOpenSSL<span class="w"> </span>PyQt5<span class="w"> </span>requests<span class="w"> </span>sip<span class="w"> </span>SQLAlchemy<span class="w"> </span>tornado<span class="w"> </span>wheel<span class="w"> </span>oracledb<span class="w"> </span>pytz
 </pre></div>
@@ -420,7 +420,7 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="installing-the-pot-code-and-setting-it-up">
-<h4><span class="section-number">5.1.1.4. </span>4. Installing the POT code and setting it up<a class="headerlink" href="#installing-the-pot-code-and-setting-it-up" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.1.1.4. </span>Installing the POT code and setting it up<a class="headerlink" href="#installing-the-pot-code-and-setting-it-up" title="Link to this heading">#</a></h4>
 <p>You should create a <code class="docutils literal notranslate"><span class="pre">runCo/</span></code> directory. It’s suggested you create it in the <code class="docutils literal notranslate"><span class="pre">/exp/icarus/app/users/$USER/</span></code> path.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>/exp/icarus/app/users/<span class="nv">$USER</span>/runCo
 </pre></div>
@@ -430,7 +430,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="installing-oracle-instantclient">
-<h5><span class="section-number">5.1.1.4.1. </span>4.1 Installing Oracle instantclient<a class="headerlink" href="#installing-oracle-instantclient" title="Link to this heading">#</a></h5>
+<h5><span class="section-number">5.1.1.4.1. </span>Installing Oracle instantclient<a class="headerlink" href="#installing-oracle-instantclient" title="Link to this heading">#</a></h5>
 <p>Before continuing on with the normal installation, we first get the</p>
 <p>To commit the POT to the Fermilab directorate performance database you will need to</p>
 <ol class="arabic simple">
@@ -452,7 +452,7 @@ document.write(`
 </div>
 </section>
 <section id="git-repository-and-pot-scripts">
-<h5><span class="section-number">5.1.1.4.2. </span>4.2 Git repository and POT scripts<a class="headerlink" href="#git-repository-and-pot-scripts" title="Link to this heading">#</a></h5>
+<h5><span class="section-number">5.1.1.4.2. </span>Git repository and POT scripts<a class="headerlink" href="#git-repository-and-pot-scripts" title="Link to this heading">#</a></h5>
 <p>In that directory you are going to create a <code class="docutils literal notranslate"><span class="pre">setup.sh</span></code> file. This will be the script you are going to run each time you need to use the POT accounting scripts.</p>
 <p>To create the <a class="reference external" href="http://setup.sh">setup.sh</a> script, start with the command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">"source /exp/icarus/app/users/</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">/miniconda3/etc/profile.d/conda.sh"</span><span class="w"> </span>&gt;<span class="w"> </span>setup.sh
@@ -485,8 +485,8 @@ conda<span class="w"> </span>activate<span class="w"> </span>runCo
 </div>
 </section>
 <section id="cloning-this-repository">
-<h5><span class="section-number">5.1.1.4.3. </span>4.3 Cloning THIS repository<a class="headerlink" href="#cloning-this-repository" title="Link to this heading">#</a></h5>
-<p>At this point you can clone this repository. Make sure to be in the <code class="docutils literal notranslate"><span class="pre">/exp/icarus/app/users/$(id</span> <span class="pre">-un)/runCo</span></code> path, and run</p>
+<h5><span class="section-number">5.1.1.4.3. </span>Cloning <a class="reference external" href="https://github.com/jedori0228/ICARUSPOTAccounting.git">THIS</a> repository<a class="headerlink" href="#cloning-this-repository" title="Link to this heading">#</a></h5>
+<p>At this point you can clone <a class="reference external" href="https://github.com/jedori0228/ICARUSPOTAccounting.git">this</a> repository. Make sure to be in the <code class="docutils literal notranslate"><span class="pre">/exp/icarus/app/users/$(id</span> <span class="pre">-un)/runCo</span></code> path, and run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jedori0228/ICARUSPOTAccounting.git<span class="w"> </span>potAccounting
 </pre></div>
 </div>
@@ -521,7 +521,7 @@ conda<span class="w"> </span>activate<span class="w"> </span>runCo
 <h3><span class="section-number">5.1.3. </span>Running the POT accounting script(s)<a class="headerlink" href="#running-the-pot-accounting-script-s" title="Link to this heading">#</a></h3>
 <p>To have the POT accounting for the week you’ll need to do three steps: 1. get the latest <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file and parse it correctly, 2. Update the delivered/collected POT databases from the beam monitoring database and 3. draw the plots.</p>
 <section id="getting-and-parsing-the-daqinterface-log-file">
-<h4><span class="section-number">5.1.3.1. </span>1. Getting and parsing the <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file<a class="headerlink" href="#getting-and-parsing-the-daqinterface-log-file" title="Link to this heading">#</a></h4>
+<h4><span class="section-number">5.1.3.1. </span>Getting and parsing the <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file<a class="headerlink" href="#getting-and-parsing-the-daqinterface-log-file" title="Link to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file (e.g., <code class="docutils literal notranslate"><span class="pre">/daq/log/DAQInterface_partition1.log</span></code>) contains typically <span class="math notranslate nohighlight">\(\mathcal O(1\times10^6)\)</span> lines. We parse this file and save the run start/stop times into a database, before we query BNB/NuMI DBs. This is done in two steps.</p>
 <p>First you get the DAQ log file, by running</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>getDAQLog.sh
@@ -537,9 +537,8 @@ conda<span class="w"> </span>activate<span class="w"> </span>runCo
 <li><p><code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">YYYY-MM-DD</span></code>, which is the day up to which update</p></li>
 </ul>
 </section>
-</section>
 <section id="update-delivered-collected-pot">
-<h3><span class="section-number">5.1.4. </span>2. Update delivered/collected POT<a class="headerlink" href="#update-delivered-collected-pot" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">5.1.3.2. </span>Update delivered/collected POT<a class="headerlink" href="#update-delivered-collected-pot" title="Link to this heading">#</a></h4>
 <p>This is done in two steps. First you run the command to update the delivered POT</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>pot_account.py<span class="w"> </span>update-daily-pot<span class="w"> </span>YYYY-MM-DD<span class="w"> </span>YYYY-MM-DD<span class="w"> </span>&lt;True/False&gt;
 </pre></div>
@@ -560,7 +559,7 @@ conda<span class="w"> </span>activate<span class="w"> </span>runCo
 </ul>
 </section>
 <section id="draw-plots">
-<h3><span class="section-number">5.1.5. </span>3. Draw plots<a class="headerlink" href="#draw-plots" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">5.1.3.3. </span>Draw plots<a class="headerlink" href="#draw-plots" title="Link to this heading">#</a></h4>
 <p>To draw the plots (which are produced in the <code class="docutils literal notranslate"><span class="pre">fig/</span></code> directory under the <code class="docutils literal notranslate"><span class="pre">potAccounting</span></code> path) you can run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>pot_account.py<span class="w"> </span>make-daq-plots<span class="w"> </span>YYYY-MM-DD<span class="w"> </span>YYYY-MM-DD
 </pre></div>
@@ -585,7 +584,7 @@ python<span class="w"> </span>pot_account.py<span class="w"> </span>make-daq-plo
 <p>Custom figure size/styling of the plots can be set by changing the script in <code class="docutils literal notranslate"><span class="pre">plotting/plot_utils.py</span></code></p>
 </section>
 <section id="commit-weekly-report-to-fermilab-directorate-performance-database">
-<h3><span class="section-number">5.1.6. </span>Commit weekly report to Fermilab directorate performance database<a class="headerlink" href="#commit-weekly-report-to-fermilab-directorate-performance-database" title="Link to this heading">#</a></h3>
+<h4><span class="section-number">5.1.3.4. </span>Commit weekly report to Fermilab directorate performance database<a class="headerlink" href="#commit-weekly-report-to-fermilab-directorate-performance-database" title="Link to this heading">#</a></h4>
 <p>Each week the runCo is expected to also upload the POT data to the databases. There is a script that query the <code class="docutils literal notranslate"><span class="pre">dbase/RunSummary.db</span></code> file (this requres the previous steps to be run) that automatically upload the data to both</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://ccdapps-dev.fnal.gov/pls/apex/f?p=104">Experiments Operations Performance Database/develop-area</a>, and</p></li>
@@ -611,6 +610,7 @@ python<span class="w"> </span>pot_account.py<span class="w"> </span>make-daq-plo
 <li><p><a class="reference external" href="https://ccdapps-prod.fnal.gov/pls/apex/f?p=104">Experiments Operations Performance Database/production-area</a>.
 You will need VPN if you are offsite.  If you need a permission, contact computing division for the access.</p></li>
 </ul>
+</section>
 </section>
 </section>
 </section>
@@ -672,25 +672,25 @@ You will need VPN if you are offsite.  If you need a permission, contact computi
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#icarus-pot-accounting-scripts">5.1. ICARUS POT accounting scripts</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-it-up">5.1.1. Setting it up</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">5.1.1.1. 1. Installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-conda-environment">5.1.1.2. 2. Creating the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-needed-software">5.1.1.3. 3. Installing the needed software</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-pot-code-and-setting-it-up">5.1.1.4. 4. Installing the POT code and setting it up</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-oracle-instantclient">5.1.1.4.1. 4.1 Installing Oracle instantclient</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#git-repository-and-pot-scripts">5.1.1.4.2. 4.2 Git repository and POT scripts</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-this-repository">5.1.1.4.3. 4.3 Cloning THIS repository</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">5.1.1.1. Installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-conda-environment">5.1.1.2. Creating the <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-needed-software">5.1.1.3. Installing the needed software</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-pot-code-and-setting-it-up">5.1.1.4. Installing the POT code and setting it up</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-oracle-instantclient">5.1.1.4.1. Installing Oracle instantclient</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#git-repository-and-pot-scripts">5.1.1.4.2. Git repository and POT scripts</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-this-repository">5.1.1.4.3. Cloning THIS repository</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-code-the-first-time">5.1.2. Running the code <em>the first time</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-pot-accounting-script-s">5.1.3. Running the POT accounting script(s)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-parsing-the-daqinterface-log-file">5.1.3.1. 1. Getting and parsing the <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-and-parsing-the-daqinterface-log-file">5.1.3.1. Getting and parsing the <code class="docutils literal notranslate"><span class="pre">DAQInterface</span></code> log file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-delivered-collected-pot">5.1.3.2. Update delivered/collected POT</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#draw-plots">5.1.3.3. Draw plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-weekly-report-to-fermilab-directorate-performance-database">5.1.3.4. Commit weekly report to Fermilab directorate performance database</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-delivered-collected-pot">5.1.4. 2. Update delivered/collected POT</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#draw-plots">5.1.5. 3. Draw plots</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-weekly-report-to-fermilab-directorate-performance-database">5.1.6. Commit weekly report to Fermilab directorate performance database</a></li>
 </ul>
 </li>
 </ul>

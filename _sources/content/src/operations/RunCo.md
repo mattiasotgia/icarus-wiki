@@ -8,7 +8,7 @@ This is a guide updated to March 9th. The setup follows different steps.
 
 > **IMPORTANT** Do not clone this repository AS-IS. Please follow these instruction, making sure that at the end it all will work properly. 
 
-#### 1. Installing `conda`
+#### Installing `conda`
 
 The first step is to have`conda` running on the `icarusgpvm` servers. This is needed to have a python environment working outside of the SL& container. `conda` OG is not allowed by FNAL since is not open-source, and so we need to use its open-source twin `conda-forge`. You can download it from the official site or using the command (from within the `icarusgpvm`) below
 
@@ -22,16 +22,16 @@ It is recomended you install the miniconda in your `/exp/icarus/app/users/$USER/
 sh Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-> **Important** You should pass the path without env. variables, so for example if your `$USER` was `johndoe` you would pass `/exp/icarus/app/user/johndoe/miniconda3/`.
+> **Important** You should pass the path without env. variables, so for example if your `$USER` was `johndoe` you would pass `/exp/icarus/app/users/johndoe/miniconda3/`.
 
 At this point in order to have the `conda` script available, you sould run the following command
 
 ```bash
-source /exp/icarus/app/user/$USER/miniconda3/etc/profile.d/conda.sh
+source /exp/icarus/app/users/$USER/miniconda3/etc/profile.d/conda.sh
 ```
 Now you are able to create the `conda` environment.
 
-#### 2. Creating the `conda` environment
+#### Creating the `conda` environment
 
 You can create the conda environment now with the command
 
@@ -45,7 +45,7 @@ After the environment is created, you can activate it with
 conda activate runCo
 ```
 
-#### 3. Installing the needed software
+#### Installing the needed software
 
 You can install the required python packages with the command 
 
@@ -55,7 +55,7 @@ pip install beautifulsoup4 Bottleneck brotli click lxml mplhep numexpr pandas py
 
 > **Note** This environment can be used also for the E-Log web scraping tools, described in [ascarpel/ELOGWebScraping](https://github.com/ascarpel/ELOGWebScraping). 
 
-#### 4. Installing the POT code and setting it up
+#### Installing the POT code and setting it up
 
 You should create a `runCo/` directory. It's suggested you create it in the `/exp/icarus/app/users/$USER/` path. 
 
@@ -68,7 +68,7 @@ Once created, do
 cd /exp/icarus/app/users/$USER/runCo
 ```
 
-##### 4.1 Installing Oracle instantclient
+##### Installing Oracle instantclient
 
 Before continuing on with the normal installation, we first get the 
 
@@ -90,7 +90,7 @@ Once downloaded, you can unzip them with
 unzip instantclient-basic-linux.x64-21.8.0.0.0dbru.zip
 ```
 
-##### 4.2 Git repository and POT scripts
+##### Git repository and POT scripts
 
 In that directory you are going to create a `setup.sh` file. This will be the script you are going to run each time you need to use the POT accounting scripts. 
 
@@ -129,9 +129,9 @@ export potDir=$POT_DIR
 cd $POT_DIR
 ```
 
-##### 4.3 Cloning THIS repository 
+##### Cloning [THIS](https://github.com/jedori0228/ICARUSPOTAccounting.git) repository 
 
-At this point you can clone this repository. Make sure to be in the `/exp/icarus/app/users/$(id -un)/runCo` path, and run 
+At this point you can clone [this](https://github.com/jedori0228/ICARUSPOTAccounting.git) repository. Make sure to be in the `/exp/icarus/app/users/$(id -un)/runCo` path, and run 
 
 ```bash
 git clone https://github.com/jedori0228/ICARUSPOTAccounting.git potAccounting
@@ -167,7 +167,7 @@ Now you're all set up, and the instruction are the same for the first and the ot
 
 To have the POT accounting for the week you'll need to do three steps: 1. get the latest `DAQInterface` log file and parse it correctly, 2. Update the delivered/collected POT databases from the beam monitoring database and 3. draw the plots. 
 
-#### 1. Getting and parsing the `DAQInterface` log file
+#### Getting and parsing the `DAQInterface` log file
 The `DAQInterface` log file (e.g., `/daq/log/DAQInterface_partition1.log`) contains typically $\mathcal O(1\times10^6)$ lines. We parse this file and save the run start/stop times into a database, before we query BNB/NuMI DBs. This is done in two steps.
 
 First you get the DAQ log file, by running 
@@ -183,7 +183,7 @@ This has the following options
 - `-i YYYY-MM-DD`,  which is the day from which to start updating
 - `-f YYYY-MM-DD`, which is the day up to which update
 
-### 2. Update delivered/collected POT
+#### Update delivered/collected POT
 
 This is done in two steps. First you run the command to update the delivered POT
 
@@ -203,7 +203,7 @@ Here
 - `YYYY-MM-DD YYYY-MM-DD` are the start and the end date to be updated
 - `True/False` are booleans for "override" option; `True` if you want to update the current table with new values
 
-### 3. Draw plots
+#### Draw plots
 
 To draw the plots (which are produced in the `fig/` directory under the `potAccounting` path) you can run 
 
@@ -232,7 +232,7 @@ All the plots refer to the period you have selected. However one additional plot
 
 Custom figure size/styling of the plots can be set by changing the script in `plotting/plot_utils.py`
 
-### Commit weekly report to Fermilab directorate performance database
+#### Commit weekly report to Fermilab directorate performance database
 
 Each week the runCo is expected to also upload the POT data to the databases. There is a script that query the `dbase/RunSummary.db` file (this requres the previous steps to be run) that automatically upload the data to both 
 - [Experiments Operations Performance Database/develop-area](https://ccdapps-dev.fnal.gov/pls/apex/f?p=104), and
